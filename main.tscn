@@ -1,6 +1,7 @@
-[gd_scene load_steps=6 format=4 uid="uid://xbpvfvhvh87m"]
+[gd_scene load_steps=7 format=4 uid="uid://xbpvfvhvh87m"]
 
 [ext_resource type="Texture2D" uid="uid://dv8vohq86n2gw" path="res://cat.webp" id="1_0xm2m"]
+[ext_resource type="Script" uid="uid://dvwvmis7ju0jj" path="res://player.gd" id="1_h2yge"]
 [ext_resource type="Texture2D" uid="uid://ckbdit43f41ei" path="res://bluetile.png" id="2_h2yge"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_1bvp3"]
@@ -407,18 +408,19 @@ sources/0 = SubResource("TileSetAtlasSource_lquwl")
 
 [node name="main" type="Node"]
 
-[node name="CharacterBody2D" type="CharacterBody2D" parent="."]
+[node name="Player" type="CharacterBody2D" parent="."]
+script = ExtResource("1_h2yge")
 
-[node name="Sprite2D" type="Sprite2D" parent="CharacterBody2D"]
+[node name="Sprite2D" type="Sprite2D" parent="Player"]
 position = Vector2(181.5, 289.5)
 scale = Vector2(0.225, 0.225)
 texture = ExtResource("1_0xm2m")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="CharacterBody2D"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Player"]
 position = Vector2(180, 289)
 shape = SubResource("RectangleShape2D_1bvp3")
 
-[node name="TileMapLayer" type="TileMapLayer" parent="CharacterBody2D"]
+[node name="TileMapLayer" type="TileMapLayer" parent="."]
 scale = Vector2(2, 2)
-tile_map_data = PackedByteArray("AAADAA4AAAADAAMAAAAEAA4AAAADAAMAAAAFAA4AAAADAAMAAAAGAA4AAAADAAMAAAAHAA4AAAADAAMAAAAIAA4AAAADAAMAAAAJAA4AAAADAAMAAAAKAA4AAAADAAMAAAALAA4AAAADAAMAAAAMAA0AAAADAAMAAAANAA0AAAADAAMAAAAOAA0AAAADAAMAAAAPAA0AAAADAAMAAAAQAA0AAAADAAMAAAARAA0AAAADAAMAAAASAA0AAAADAAMAAAATAA0AAAADAAMAAAAUAA0AAAADAAMAAAA=")
+tile_map_data = PackedByteArray("AAADAA4AAAADAAMAAAAEAA4AAAADAAMAAAAFAA4AAAADAAMAAAAGAA4AAAADAAMAAAAHAA4AAAADAAMAAAAIAA4AAAADAAMAAAAJAA4AAAADAAMAAAAKAA4AAAADAAMAAAALAA4AAAADAAMAAAAMAA0AAAADAAMAAAANAA0AAAADAAMAAAAOAA0AAAADAAMAAAAPAA0AAAADAAMAAAAQAA0AAAADAAMAAAARAA0AAAADAAMAAAASAA0AAAADAAMAAAATAA0AAAADAAMAAAAUAA0AAAADAAMAAAAWAAwAAAADAAYAAAAXAAwAAAADAAYAAAAYAAwAAAADAAYAAAAZAAwAAAADAAYAAAAaAAwAAAADAAYAAAAbAAwAAAADAAYAAAAcAAwAAAADAAYAAAAdAAwAAAADAAYAAAAeAAwAAAADAAYAAAAfAAwAAAADAAYAAAA=")
 tile_set = SubResource("TileSet_7mycd")
