@@ -11,8 +11,13 @@ config_version=5
 [application]
 
 config/name="water"
+run/main_scene="uid://xbpvfvhvh87m"
 config/features=PackedStringArray("4.4", "Mobile")
 config/icon="res://icon.svg"
+
+[editor_plugins]
+
+enabled=PackedStringArray("res://addons/godot_super-wakatime/plugin.cfg")
 
 [rendering]
 
