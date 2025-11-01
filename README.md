@@ -1,5 +1,5 @@
 # watergame
-Watergame is a game in Godot where the user plays as a cat navigating the ocean. I made this project because I wanted to learn how to code games, I really like cats, and I wanted a unique enviornment like Estella Gu's Signal Lost game (https://github.com/themagicfrog/signalLost). I haven't implemented underwater mechanics yet though.
+Watergame is a platformer game in Godot where the user plays as a cat navigating the ocean. I made this project because I wanted to learn how to code games, I really like cats, and I wanted a unique enviornment like Estella Gu's Signal Lost game (https://github.com/themagicfrog/signalLost). I haven't implemented underwater mechanics yet though.
 
 ## Process
 I followed Hack Club's guide for creating a game in Godot, brainstormed ideas for a game, and researched modifications I could make like more maps or character animations.
