@@ -1,0 +1,47 @@
+[gd_scene load_steps=8 format=3 uid="uid://duvnw7ny2v2rm"]
+
+[ext_resource type="Texture2D" uid="uid://brblkc6tlncgd" path="res://coin_assets/SAMPLE PACK - Pixel Gnome Fishing Pack/A - Salt Water/Crab - Dungeness.png" id="1_0t63x"]
+[ext_resource type="Script" uid="uid://deo7mvvu5f74k" path="res://collectibles/scripts/coin.gd" id="1_v7riw"]
+[ext_resource type="Texture2D" uid="uid://c6uxws284bcdc" path="res://coin_assets/SAMPLE PACK - Pixel Gnome Fishing Pack/A - Salt Water/Crab - Dungeness Outline.png" id="2_v7riw"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_pdq0q"]
+atlas = ExtResource("1_0t63x")
+region = Rect2(0, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_w14il"]
+atlas = ExtResource("2_v7riw")
+region = Rect2(0, 0, 18, 18)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_h4etq"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_pdq0q")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_w14il")
+}],
+"loop": false,
+"name": &"spin",
+"speed": 5.0
+}]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_pdq0q"]
+radius = 9.0
+
+[node name="Coin" type="Node2D"]
+scale = Vector2(1.5, 1.5)
+script = ExtResource("1_v7riw")
+value = null
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_h4etq")
+animation = &"spin"
+autoplay = "spin"
+
+[node name="Area2D" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+shape = SubResource("CircleShape2D_pdq0q")
+
+[connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]

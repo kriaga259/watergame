@@ -1,0 +1,33 @@
+[gd_scene load_steps=3 format=3 uid="uid://gw7fq1xknqoo"]
+
+[ext_resource type="Script" uid="uid://ct5yfrj56sggq" path="res://collectibles/scripts/coin_ui.gd" id="1_mtxch"]
+[ext_resource type="Texture2D" uid="uid://brblkc6tlncgd" path="res://coin_assets/SAMPLE PACK - Pixel Gnome Fishing Pack/A - Salt Water/Crab - Dungeness.png" id="2_u0bud"]
+
+[node name="CoinUI" type="Control"]
+layout_mode = 3
+anchors_preset = 0
+offset_left = 30.0
+offset_top = 30.0
+offset_right = 70.0
+offset_bottom = 70.0
+script = ExtResource("1_mtxch")
+
+[node name="TextureRect" type="TextureRect" parent="."]
+layout_mode = 0
+offset_right = 16.0
+offset_bottom = 16.0
+scale = Vector2(5, 5)
+texture = ExtResource("2_u0bud")
+expand_mode = 1
+stretch_mode = 1
+
+[node name="Label" type="Label" parent="."]
+layout_mode = 0
+offset_left = 90.0
+offset_top = -1.0
+offset_right = 124.0
+offset_bottom = 82.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 60
+text = "0"
+horizontal_alignment = 1

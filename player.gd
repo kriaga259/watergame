@@ -1,5 +1,4 @@
-extends CharacterBody2D
-
+class_name Player extends CharacterBody2D
 
 const SPEED = 800.0
 const JUMP_VELOCITY = -900.0 #might want to change these 2 and gravity to default
